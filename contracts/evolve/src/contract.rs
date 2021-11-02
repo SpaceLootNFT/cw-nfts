@@ -3,10 +3,9 @@ use cosmwasm_std::entry_point;
 use cosmwasm_std::{to_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response, StdResult, QueryRequest, WasmQuery, };
 use cw2::set_contract_version;
 use cw721::{Cw721QueryMsg, NftInfoResponse};
-use cw721_metadata_onchain::Metadata;
 
 use crate::error::ContractError;
-use crate::msg::{CountResponse, ExecuteMsg, InstantiateMsg, QueryMsg};
+use crate::msg::{CountResponse, ExecuteMsg, InstantiateMsg, QueryMsg, Metadata};
 use crate::state::{State, STATE};
 
 // version info for migration info
