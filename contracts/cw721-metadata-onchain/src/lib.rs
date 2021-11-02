@@ -23,6 +23,9 @@ pub struct Metadata {
     pub background_color: Option<String>,
     pub animation_url: Option<String>,
     pub youtube_url: Option<String>,
+    // custom field
+    pub rarity_level: Option<u128>,
+    pub unlockable_content: Option<bool>
 }
 
 pub type Extension = Option<Metadata>;

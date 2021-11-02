@@ -45,4 +45,20 @@ const wallet = create_wallet(MNEMONIC);
         }
     })
     console.log(nft_info)
+    // deploy evolve contract
+    const evolve_code_path = '../artifacts/evolve.wasm'
+    const evolve_code_id = await upload(wallet, evolve_code_path)
+    // deploy contract
+    const init_evlove_response = await init(wallet, evolve_code_id, {
+        count: 1
+    })
+    const evolve_addr = init_evlove_response.contract_addr
+    console.log(evolve_addr)
+    const nft_info2 = await query(evolve_addr, {
+        get_nft: {
+            addr: nft_addr,
+            token_id: 'BTC'
+        }
+    })
+    console.log(nft_info2)
 })()
