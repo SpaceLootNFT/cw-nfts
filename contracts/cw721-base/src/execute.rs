@@ -59,6 +59,7 @@ where
                 self.approve_all(deps, env, info, operator, expires)
             }
             ExecuteMsg::RevokeAll { operator } => self.revoke_all(deps, env, info, operator),
+            /*
             ExecuteMsg::TransferNft {
                 recipient,
                 token_id,
@@ -68,6 +69,7 @@ where
                 token_id,
                 msg,
             } => self.send_nft(deps, env, info, contract, token_id, msg),
+            */
         }
     }
 }

@@ -160,7 +160,7 @@ where
         match msg {
             QueryMsg::Minter {} => to_binary(&self.minter(deps)?),
             QueryMsg::ContractInfo {} => to_binary(&self.contract_info(deps)?),
-            QueryMsg::NftInfo { token_id } => to_binary(&self.nft_info(deps, token_id)?),
+            //QueryMsg::NftInfo { token_id } => to_binary(&self.nft_info(deps, token_id)?),
             QueryMsg::OwnerOf {
                 token_id,
                 include_expired,

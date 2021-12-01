@@ -24,14 +24,16 @@ pub struct InstantiateMsg {
 #[serde(rename_all = "snake_case")]
 pub enum ExecuteMsg<T> {
     /// Transfer is a base message to move a token to another account without triggering actions
-    TransferNft { recipient: String, token_id: String },
+    //TransferNft { recipient: String, token_id: String },
     /// Send is a base message to transfer a token to a contract and trigger an action
     /// on the receiving contract.
+    /*
     SendNft {
         contract: String,
         token_id: String,
         msg: Binary,
     },
+    */
     /// Allows operator to transfer / send the token from the owner's account.
     /// If expiration is set, then this allowance has a time/height limit
     Approve {
@@ -96,9 +98,11 @@ pub enum QueryMsg {
     /// With MetaData Extension.
     /// Returns metadata about one particular token, based on *ERC721 Metadata JSON Schema*
     /// but directly from the contract: `NftInfoResponse`
+    /*
     NftInfo {
         token_id: String,
     },
+    */
     /// With MetaData Extension.
     /// Returns the result of both `NftInfo` and `OwnerOf` as one query as an optimization
     /// for clients: `AllNftInfo`

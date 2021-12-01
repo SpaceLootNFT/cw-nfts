@@ -39,10 +39,12 @@ const wallet = create_wallet(MNEMONIC);
         }
     })
     console.log(response)
+    /*
     const nft_info = await query(nft_addr, {
         nft_info: {
             token_id: 'BTC'
         }
     })
     console.log(nft_info)
+    */
 })()
